@@ -1,0 +1,13 @@
+CREATE DATABASE mydb;
+use mydb;
+CREATE TABLE employees (
+. . . . . . . . . . . . . . . .>     emp_id INT,
+. . . . . . . . . . . . . . . .>     emp_name STRING,
+. . . . . . . . . . . . . . . .>     emp_age INT,
+. . . . . . . . . . . . . . . .>     emp_salary FLOAT
+. . . . . . . . . . . . . . . .> ) ROW FORMAT DELIMITED
+. . . . . . . . . . . . . . . .> FIELDS TERMINATED BY ','
+. . . . . . . . . . . . . . . .> STORED AS TEXTFILE;
+SHOW TABLES;
+ALTER TABLE employees ADD COLUMNS (emp_email STRING);
+DROP TABLE employees;
